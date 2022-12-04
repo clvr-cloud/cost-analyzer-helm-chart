@@ -1,0 +1,31 @@
+apiVersion: v1
+entries:
+  cost-analyzer:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Homepage
+          url: https://www.kubecost.com
+    apiVersion: v2
+    appVersion: 1.98.0
+    created: "2022-12-04T13:56:58.557421+13:00"
+    dependencies:
+    - condition: global.grafana.enabled
+      name: grafana
+      repository: file://./charts/grafana
+      version: ~1.17.2
+    - condition: global.prometheus.enabled
+      name: prometheus
+      repository: file://./charts/prometheus
+      version: ~11.0.2
+    - condition: global.thanos.enabled
+      name: thanos
+      repository: file://./charts/thanos
+      version: ~0.24.0
+    description: A Helm chart that sets up Kubecost, Prometheus, and Grafana to monitor
+      cloud costs.
+    digest: e3213beab1c3a176cdce4967ef36028514529a2d8aace2cb72aa39607372cdd5
+    name: cost-analyzer
+    urls:
+    - https://clvr-cloud.github.io/cost-analyzer-helm-chart/cost-analyzer-1.98.0.tgz
+    version: 1.98.0
+generated: "2022-12-04T13:56:58.549149+13:00"
